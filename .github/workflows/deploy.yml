@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+
+env: 
+  NAME: nana
+  USERNAME: kosa
+
 jobs: 
   My-Deploy-Job: 
     runs-on: ubuntu-latest
@@ -17,14 +22,11 @@ jobs:
           echo "Morning"
           
       - name: 현재 작업 폴더 출력
-        run: |
-          pwd
-          
+        run: pwd
+
       - name: 작업 폴더 목록 확인
-        run: |
-          ls -al
+        run: ls -al
           
       - name: 환경변수 모두 출력
-        run: |
-          env
+        run: env
           
